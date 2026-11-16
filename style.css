@@ -1,0 +1,540 @@
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: #F9F6F0;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    color: #58111A;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* Product Cards */
+.wine-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff;
+}
+
+.wine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(88, 17, 26, 0.12);
+}
+
+.wine-card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.wine-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin-bottom: 8px;
+}
+
+.wine-made {
+    font-size: 14px;
+    color: #4c4c4c;
+    margin-bottom: 8px;
+}
+
+.wine-price {
+    font-size: 20px;
+    color: #8B1338;
+    font-weight: 700;
+}
+
+.wine-card-footer {
+    background-color: #58111A;
+    padding: 12px 15px;
+    border-top: none;
+}
+
+.qty-input {
+    width: 60px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 4px 8px; /* เพิ่มระยะ ภายในให้พอดี */
+}
+
+.qty-input:focus {
+    background-color: #ffffff;
+    color: #000;
+    outline: none;
+}
+
+/* Submit Button */
+.btn-checkout {
+    background: linear-gradient(135deg, #58111A, #8B1338);
+    color: #ffffff;
+    border: none;
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(139, 19, 56, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-checkout:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(139, 19, 56, 0.4);
+    color: #ffffff;
+}
+
+.wine-img-container {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.wine-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.wine-card:hover .wine-img {
+    transform: scale(1.05);
+}
+
+.brand {
+    font-family: 'Playfair Display', serif;
+    color: #58111A;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.brand i {
+    color: #8B1338;
+}
+
+/* Login Section */
+.login-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 15px;
+}
+
+.login-card {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(88, 17, 26, 0.08);
+}
+
+.login-icon {
+    width: 70px;
+    height: 70px;
+    background: #f3e8eb;
+    color: #58111A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 20px;
+}
+
+.login-title {
+    font-family: 'Prompt', serif;
+    color: #58111A;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.login-subtitle {
+    color: #888;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #4a4a4a;
+}
+
+.form-control {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.form-control:focus {
+    border-color: #8B1338;
+    box-shadow: 0 0 0 0.2rem rgba(139, 19, 56, 0.12);
+}
+
+.input-group-text {
+    background: #f9f6f0;
+    border-color: #ddd;
+    color: #58111A;
+}
+
+/* Login Button */
+.btn-login {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #58111A, #8B1338);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background: linear-gradient(135deg, #8B1338, #58111A);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 19, 56, 0.25);
+}
+
+.error-message {
+    color: #dc3545;
+    background: #fff0f0;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+footer {
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #e9ecef;
+    color: #555555;
+    padding: 20px 0;
+        font-size: 13px;
+    margin-top: auto; /* ดัน Footer ลงล่างสุดเสมอ */
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 22px;
+    }
+}
+
+.brand {
+    font-family: 'Playfair Display', serif;
+    color: #58111A;
+    font-weight: 700;
+}
+
+.main-card {
+    background: white;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    color: #58111A;
+    font-weight: 600;
+}
+
+.btn-wine {
+    background: linear-gradient(135deg, #58111A, #8B1338);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.btn-wine:hover {
+    background: #8B1338;
+    color: white;
+}
+
+.product-img {
+    width: 55px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.table thead {
+    background: #58111A;
+    color: white;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+}
+
+.btn-delete:hover {
+    background: #bb2d3b;
+    color: white;
+}
+
+.form-control:focus {
+    border-color: #8B1338;
+    box-shadow: 0 0 0 0.2rem rgba(139, 19, 56, 0.12);
+}
+
+.about-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    padding: 40px 30px;
+}
+
+.about-title {
+    font-family: 'Playfair Display', serif;
+    color: #58111A;
+    font-weight: 700;
+    margin-bottom: 24px;
+    position: relative;
+    display: inline-block;
+}
+
+.about-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #8B1338;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+.about-text {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #4a4a4a;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+footer {
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #e9ecef;
+    color: #555555;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+footer address {
+    margin: 0;
+    font-style: normal;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    color: #58111A;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Product Container Card */
+.detail-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e0d8d8;
+    box-shadow: 0 8px 30px rgba(88, 17, 26, 0.08);
+    overflow: hidden;
+    padding: 30px;
+}
+
+.wine-img-container img {
+    max-height: 380px;
+    max-width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.15));
+}
+
+/* Product Info Styling */
+.wine-title {
+    font-family: 'Playfair Display', serif;
+    color: #58111A;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #58111A;
+    padding-bottom: 10px;
+}
+
+.facts-fieldset {
+    border: 1px solid #e2d7d7;
+    border-radius: 12px;
+    padding: 24px;
+    background-color: #fffcf8;
+}
+
+.facts-legend {
+    float: none;
+    width: auto;
+    padding: 0 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #58111A;
+    font-family: 'Prompt', serif;
+}
+
+/* Specification List */
+.spec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px 16px;
+    margin-top: 16px;
+}
+
+.spec-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.spec-label {
+    font-size: 16px;
+    color: #4c4c4c;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.spec-value {
+    font-size: 16px;
+    color: #2c2c2c;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Action Buttons */
+.btn-back {
+    background-color: transparent;
+    color: #58111A;
+    border: 1px solid #58111A;
+    padding: 10px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #58111A;
+    color: #ffffff;
+}
+
+
+/* Register Page */
+.register-card {
+    background: white;
+    width: 100%;
+    max-width: 750px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(88, 17, 26, 0.08);
+}
+
+.register-card hr {
+    border-color: #e8dede;
+    margin: 25px 0;
+}
+
+.register-card .section-title {
+    color: #58111A;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.register-card .btn-login {
+    margin-top: 20px;
+}
+
+@media (max-width: 576px) {
+    .register-card {
+        padding: 25px 20px;
+    }
+}
+
+.wine-detail-img-container {
+    background-color: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+}
+
+.container.pb-5 {
+    padding-bottom: 80px !important;
+}
+
+.btn-checkout {
+    font-family: 'Prompt', sans-serif !important;
+    letter-spacing: 0.5px;
+}
+
+.btn-red {
+    background-color: transparent;
+    color: #8B1338;
+    border: 1px solid #8B1338;
+    border-radius: 8px;
+    padding: 8px 24px;
+    text-decoration: none;
+}
+
+.btn-red:hover {
+    background: #8B1338;
+    color: white;  
+}
+
+.btn-yellow {
+    background-color: transparent;
+    color: #cb9305;
+    border: 1px solid #cb9305;
+    border-radius: 8px;
+    padding: 8px 24px;
+    text-decoration: none;
+}
+
+.btn-yellow:hover {
+    background: #ffc107;
+    color: black;  
+}
+
+.btn-save {
+    background-color: #8B1338;
+    color: white;
+    border-radius: 8px;
+    padding: 8px 24px;
+    text-decoration: none;
+}
+
+.btn-save:hover {
+    background: #58111A;
+    color: white;  
+}
